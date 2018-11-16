@@ -1,0 +1,52 @@
+### your site title here
+
+title: 人間開花
+blogname: SAKUYAKUN
+description: Sakuya's Blog
+keyword: Sakuya,人間開花,咲夜,咲夜君
+name: 人間開花
+url: https://sakuyakun.top
+baseurl:  # name of the repository
+email: xxxxx@gmail.com
+githubid: Sakuyakun
+ins: vevecn
+twitter: sakuya_official
+fb: sakuya4am
+steam: sakuya2525
+
+highlighter: rouge
+markdown: kramdown
+
+# Comments
+disqus-shortname: 
+
+#optimization
+#compress.html
+compress_html:
+  clippings: [html,div, p, ul, td, h1, h2, h3, h4,link, meta, footer, nav, img, header, hr, br, head, style, li, ul, ol, time, main, script, title]
+  comments: ["<!-- ", " -->"]
+  endings: [all]
+  ignore:
+    envs: [local]
+  blanklines: false
+  profile: false
+  startings: []
+
+sass:
+ style: compressed
+
+exclude:
+- README.md
+
+plugins: 
+- jekyll-paginate
+- jekyll-seo-tag
+- jekyll-sitemap
+
+paginate: 15
+paginate_path: /page:num/
+
+footer:
+  since: 2015
+
+domain: "https://sakuyakun.top"

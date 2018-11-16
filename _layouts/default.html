@@ -1,0 +1,48 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="{{ site.description }}">
+        <meta name="keywords"  content="{{ site.keyword }}">
+        <title>{% if page.title %}{{ page.title }} - {{ site.name }}{% else %}{{ site.title }}{% endif %}</title>
+        <!--   <link href="https://fonts.googleapis.com/css?family=Lato:900|Work+Sans" rel="stylesheet"> -->
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="shortcut icon" href="/favicon.ico">
+        {% seo %}
+        {% include baiduAnalytics.html %}
+        <script async src="/js/theme.js"></script>
+    </head>
+
+    <body style="background-color: rgb(255, 255, 255)">
+        <header>
+            <div class="links">
+                <a href="/" data-router="index">INDEX</a>
+                <a href="/music/" data-router="music">MUSIC</a>
+                <a href="/about/" data-router="about">ABOUT</a>
+                <!-- <a onclick="theme()">Night Mode</a> -->
+            </div>
+        </header>
+
+        <main>
+            <article class="blog-article">
+                {{ content }}
+            </article>
+        </main>
+
+        <footer>
+            <p class="copy"><small>
+                <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">CC BY-NC-ND 4.0</a>
+                {% assign current = "now" | date: "%Y" | plus: 0%}
+                © SAKUYA 2015-{{ current }}
+            </small></p>
+        </footer>
+        {% include analytics.html %}
+
+        <script src="/js/zoom-image.js"></script>
+        <script src="/js/index.js"></script>
+    </body>
+</html>

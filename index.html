@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<div class="headline">{{site.blogname}}<span class="gaden">'S GARDEN</span></div>
+<div class="article-list">
+
+{% for post in paginator.posts %}
+    <div class="blog-article-line">
+      <h2><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a></h2>
+      <div class="meta"><small>{{post.date | date: '%B %d, %Y'}}</small></div>
+      <p class="sub">{{post.excerpt | strip_html | truncate:170}}</p>
+    </div>
+{% endfor %}
+
+{% if paginator.total_pages > 1 %}
+<div class="pagination"> 
+  {% if paginator.previous_page %}
+    <a class="pagination-prev" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+  {% else %}
+    <span class="pagination-prev pagination-end">&laquo; Prev</span>
+  {% endif %}
+
+  {% if paginator.next_page %}
+    <a class="pagination-next" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+  {% else %}
+    <span class="pagination-next pagination-end" >Next &raquo;</span>
+  {% endif %}
+</div>
+{% endif %}
+
+</div>

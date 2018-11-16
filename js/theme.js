@@ -1,0 +1,27 @@
+function theme() {
+     if ( sessionStorage.getItem('bg') === 'rgb(255, 255, 255)') {
+        sessionStorage.setItem('bg', 'rgb(6, 23, 37)')
+        sessionStorage.setItem('cc', '#777')
+        sessionStorage.setItem('tn', 'theme-night')
+    }
+    else if (sessionStorage.getItem('bg') == null || undefined) {
+        sessionStorage.setItem('bg', 'rgb(6, 23, 37)')
+        sessionStorage.setItem('cc', '#777')
+        sessionStorage.setItem('tn', 'theme-night')
+    }
+    else if( sessionStorage.getItem('bg') === 'rgb(6, 23, 37)') {
+        sessionStorage.setItem('bg', 'rgb(255, 255, 255)')
+        sessionStorage.setItem('cc', '#333')
+        sessionStorage.setItem('tn', 'theme-white')
+    }
+    setstyle()
+}
+
+function setstyle () {
+    document.body.style.backgroundColor = sessionStorage.getItem('bg')
+    document.body.style.color = sessionStorage.getItem('cc')
+    document.body.classList = ''
+    document.body.classList.add(sessionStorage.getItem('tn') || 'theme-white')
+}
+
+setstyle()

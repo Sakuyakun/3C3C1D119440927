@@ -1,0 +1,19 @@
+{
+  "name": "sakuyakun.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ud": "git add . && git commit -m 'UPDATE' && git push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sakuyakun/Sakuyakun.github.io.git"
+  },
+  "author": "Sakuyakun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sakuyakun/Sakuyakun.github.io/issues"
+  },
+  "homepage": "https://github.com/Sakuyakun/Sakuyakun.github.io#readme"
+}

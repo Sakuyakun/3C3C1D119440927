@@ -1,0 +1,67 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+$base-font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
+$head-title-font: -apple-system, PingFang SC, "Microsoft YaHei", "Helvetica Neue", "Arial", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
+$base-font-size:   18px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.7;
+
+$spacing-unit:     30px;
+
+$headline-color:   #b2cfdc;
+$title-color:      #444444;
+$text-color:       #404040;
+$p-sub:            #a3a3a3;
+$background-color: #fdfdfd;
+$brand-color:      #404040;
+$a-color:          #95b0bf;
+$a-hover-color:    #95b0bf;
+
+$night-bg:         #061725;
+$night-color:      #777777;
+$a-night-color:    #a2a2a2;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    800px;
+$on-palm:          600px;
+$on-laptop:        1000px;
+
+$td-border-color:  #ebeef5;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+@mixin pc-query($device) {
+    @media screen and (min-width: $device) {
+        @content;
+    }
+}
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+// Do not make any changes to this file. Go to /_sass and find the appropriate SCSS file and make changes there.
+@import
+    "style",
+    "google-fonts",
+    "manni",
+    "zoom-image"
+;
+
+
